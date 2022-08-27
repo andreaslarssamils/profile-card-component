@@ -1,0 +1,144 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+:root {
+  --Darkcyan: hsl(185, 75%, 39%);
+  --Verydarkdesaturatedblue: hsl(229, 23%, 23%);
+  --Darkgrayishblue: hsl(227, 10%, 46%);
+  --Darkgray: hsl(0, 0%, 59%);
+  --BorderGray: hsla(228, 9%, 92%, 1);
+}
+
+h1,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  margin: 0;
+  height: 720px;
+  background-color: var(--Darkcyan);
+  justify-content: center;
+  align-items: center;
+  font-family: 'Kumbh Sans', sans-serif;
+  text-align: center;
+}
+
+.background-top {
+  position: absolute;
+  width: 978px;
+  height: 978px;
+  background-image: url(./images/bg-pattern-top.svg);
+  top: -70%;
+  left: -20%;
+}
+
+.background-bottom {
+  position: absolute;
+  width: 978px;
+  height: 978px;
+  right: -20%;
+  bottom: -80%;
+  background-image: url(./images/bg-pattern-bottom.svg);
+}
+
+.card {
+  position: relative;
+  width: 350px;
+  height: 374px;
+  background-color: white;
+  border-radius: 15px;
+  z-index: 1;
+}
+
+.hero-image {
+  background-image: url(./images/bg-pattern-card.svg);
+  width: 100%;
+  height: 149px;
+  border-radius: 15px 15px 0 0;
+}
+
+.profile-pic img {
+  position: absolute;
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  border: 5px solid white;
+  margin: 0 auto 0 auto;
+  top: 150px;
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card h1 {
+  font-size: 1.125rem;
+  text-align: center;
+  margin-top: 66px;
+  color: var(--Verydarkdesaturatedblue);
+}
+
+span {
+  color: var(--Darkgrayishblue);
+  margin-left: 8px;
+  font-weight: 400;
+}
+
+.card .city {
+  text-align: center;
+  font-weight: 400;
+  font-size: 0.875rem;
+  margin-top: 8px;
+  color: var(--Darkgrayishblue);
+}
+
+hr {
+  margin-top: 28px;
+  border: none;
+  height: 1px;
+  background-color: var(--BorderGray);
+}
+
+.stats {
+  display: flex;
+  margin: 21px 50px 0 50px;
+  justify-content: space-between;
+}
+
+.stats .amount {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--Verydarkdesaturatedblue);
+}
+
+.stats .sub {
+  font-size: 0.625rem;
+  color: var(--Darkgrayishblue);
+  letter-spacing: 1.5px;
+  margin-top: 2px;
+}
+
+@media screen and (max-width: 600px) {
+  .card {
+    width: 326px;
+  }
+
+  .stats {
+    margin: 21px 45px 0 45px;
+  }
+
+  .background-top {
+    left: -188%;
+  }
+
+  .background-bottom {
+    right: -165%;
+  }
+}
